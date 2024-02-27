@@ -1,4 +1,6 @@
-﻿namespace revisoes_1
+﻿using System.Net.Http.Headers;
+
+namespace revisoes_1
 {
     class Program
     {
@@ -15,18 +17,83 @@
             public double cVencimento;
         }
 
-        // funçao que apresenta um conjunto de opecoes e retorna ao prog principal a opecao escolhida
+        // funçao que apresenta um conjunto de opcoes e retorna ao prog principal a opcao escolhida
         public static int menu()
         {
             int opcao = 0;
             Console.WriteLine("Menu de opcoes:");
             Console.WriteLine("1 Preencher colaboradores");
             Console.WriteLine("2 Listar colaboradores");
+            Console.WriteLine("3 Maior vencimento");
+            Console.WriteLine("4 Media de vencimentos");
             Console.WriteLine("0 Sair do programa");
             Console.Write("Escolha uma opcao:");
             opcao = Convert.ToInt32(Console.ReadLine());
 
             return opcao;
+        }
+
+        //inserir novos colaboradores
+        public static void inserirColaborador(sColaboradores[] col, int ncol)
+        {
+            for (int i = 0; i < ncol; i++)
+            {
+                // {i+1} = quando mostrar no console nao aparece "0 colaborador, 1 colaborador, etc" mas sim comeca logo no 1 colaborador
+                Console.WriteLine($"Preencher o {i + 1}º colaborador");
+
+                //  Console.Write = write só serve para escrever 
+                Console.Write("Insere o código: ");
+                col[i].cCodigo = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Insira o Nome: ");
+                col[i].cNome = Console.ReadLine();
+
+                Console.Write("Insere a idade: ");
+                col[i].cIdade = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Insere o Vencimento: ");
+                col[i].cVencimento = Convert.ToDouble(Console.ReadLine());
+            }
+        }
+
+        //Listar dados dos colaboradores
+        public static void listarColaboradores(sColaboradores[] aCol, int ncol)
+        {
+            for (int i = 0; i < ncol; i++)
+            {
+                Console.WriteLine($"Codigo do colaborador: {aCol[i].cCodigo}");
+                Console.WriteLine($"Nome do colaborador: {aCol[i].cNome}");
+                Console.WriteLine($"Idade do colaborador: {aCol[i].cIdade}");
+                Console.WriteLine($"Vencimento do colaborador: {aCol[i].cVencimento}");
+            }
+        }
+
+        //Identificar maior vencimento
+        public static void identMaiorVenc(sColaboradores[] aCol, int nCol, int maiorVenc, string nomeColabMaiorVenc)
+        {
+            maiorVenc = aCoL[0].cVencimento;
+            nomeColabMaiorVenc = aCol[0].cNome;
+            for (int i = 1; i < nCol; i++)
+                if (aCol[i].cVencimento > maiorVenc)
+                {
+                    maiorVenc = aCol[i].cVencimento;
+                    nomeColabMaiorVenc = aCol[i].cNome;
+                }
+            Console.WriteLine("Maior dos vencimentos: {0} do/a colaborador/a: {1}", maiorVenc, nomeColabMaiorVenc);
+        }
+
+        //Media dos vencimentos
+        public static double mediaVenc(sColaboradores[] c, int n)
+        {
+            double soma = 0, media = 0;
+            soma = 0;
+            media = 0;
+            for (int i = 0; i < n; i++)
+                soma += c[i].cVencimento;
+
+            media = Math.Round(soma / n, 1);
+
+            return media;
         }
 
         static void Main(string[] args)
@@ -46,6 +113,13 @@
             int numColab = 0;
             // defenicao de var para opcao da escolha do utiçlizador
             int op = 0;
+
+            //def var soma para apoiar a media de vencimentos
+            double media = 0;
+
+            //def da var que recebe o maior dos vencimentos
+            double maiorVenc = 0;
+            string nomeColabMaiorVenc = "";
 
 
             /*
@@ -142,34 +216,25 @@
                 {
                     case 1:
                         // ciclo para preencher - estruturas de colaboradores
-                        for (int i = 0; i < numColab; i++)
-                        {
-                            // {i+1} = quando mostrar no console nao aparece "0 colaborador, 1 colaborador, etc" mas sim comeca logo no 1 colaborador
-                            Console.WriteLine($"Preencher o {i + 1}º colaborador");
+                        inserirColaborador(aColab, numColab);
 
-                            //  Console.Write = write só serve para escrever 
-                            Console.Write("Insere o código: ");
-                            aColab[i].cCodigo = Convert.ToInt32(Console.ReadLine());
-
-                            Console.Write("Insira o Nome: ");
-                            aColab[i].cNome = Console.ReadLine();
-
-                            Console.Write("Insere a idade: ");
-                            aColab[i].cIdade = Convert.ToInt32(Console.ReadLine());
-
-                            Console.Write("Insere o Vencimento: ");
-                            aColab[i].cVencimento = Convert.ToDouble(Console.ReadLine());
-                        }
                         break;
                     case 2:
+                        //Listagem dos colaboradores
+                        listarColaboradores(aColab, numColab);
+                      
+                        break;
+                    case 3:
+                        //Identificar o maior dos vencimentos
+                        identMaiorVenc(aColab, int numColab, int maiorVenc, string nomeColabMaiorVenc)
 
-                        for (int i = 0; i < numColab; i++)
-                        {
-                            Console.WriteLine($"Codigo do colaborador: {aColab[i].cCodigo}");
-                            Console.WriteLine($"Nome do colaborador: {aColab[i].cNome}");
-                            Console.WriteLine($"Idade do colaborador: {aColab[i].cIdade}");
-                            Console.WriteLine($"Vencimento do colaborador: {aColab[i].cVencimento}");
-                        }
+
+                        break;
+                    case 4:
+                        //Determinar a media de vencimentos
+                        media = mediaVenc(aColab, int numColab);
+                        Console.WriteLine($"O valor da media é = {media}");
+
                         break;
                     case 0:
                         Console.WriteLine("Saida do programa");

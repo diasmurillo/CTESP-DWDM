@@ -47,14 +47,27 @@
             </section>
         </article>
     </main>
-    <footer>
-       <a href="#"><img src="images/facebook_icon.png" alt=""></a>
-       <a href="#"><img src="images/instagram_icon.png" alt=""></a>
-       <a href="#"><img src="images/linkedin_icon.png" alt=""></a>
-       <a href="#"><img src="images/whatsapp_icon.png" alt=""></a>
-       <a href="#"><img src="images/youtube_icon.png" alt=""></a>
 
-        <p>Direitos de autor © 2022 ISLA Gaia | Instituto Politécnico de gestão e tecnologia. | Todos os direitos reservados </p>
+    <button id="topBtn" onclick="" title="Para o topo">Topo</button>
+
+    <footer>
+       <a href="#"><img src="images/facebook_icon.png" alt="logotipo do facebook" width="30"></a>
+       <a href="#"><img src="images/instagram_icon.png" alt="logotipo do instagram" width="30"></a>
+       <a href="#"><img src="images/linkedin_icon.png" alt="logotipo do linkedin" width="30"></a>
+       <a href="#"><img src="images/whatsapp_icon.png" alt="logotipo do whatsapp" width="30"></a>
+       <a href="#"><img src="images/youtube_icon.png" alt="logotipo do youtube" width="30"></a>
+
+        <p>Direitos de autor &copy; 2024 ISLA Gaia | Instituto Politécnico de gestão e tecnologia. | Todos os direitos reservados </p>
     </footer>
+
+    <script>
+        let botao = document.getElementById("topBtn")
+
+        function scrollBody(){
+            if(document.documentElement.scrollTop > 100){
+                botao.style.visibility(visible)
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\bin\Debug\net8.0\ClassePessoa_2.exe
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\bin\Debug\net8.0\ClassePessoa_2.deps.json
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\bin\Debug\net8.0\ClassePessoa_2.runtimeconfig.json
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\bin\Debug\net8.0\ClassePessoa_2.dll
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\bin\Debug\net8.0\ClassePessoa_2.pdb
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.dll
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\refint\ClassePessoa_2.dll
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.pdb
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ClassePessoa_2.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\Cursos\CTESP\programaçãoOrientadaObjetos\ClassePessoa_2\ClassePessoa_2\obj\Debug\net8.0\ref\ClassePessoa_2.dll
